@@ -1,0 +1,308 @@
+/* Global Base Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+/* Header */
+.main-header {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d35400;
+  text-decoration: none;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 160, 90, 0.2);
+}
+
+.cta-button {
+  background-color: #d35400;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #b54300;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+  border-top: 1px solid #ccc;
+}
+
+/* Containers */
+.container,
+.results-card {
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Welcome Section */
+.welcome-box {
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 30px;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h1 {
+  color: #d35400;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.welcome-box p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Form Styling */
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button,
+a.button-link,
+.delete-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #d35400;
+  color: white;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+form button:hover,
+a.button-link:hover,
+.delete-button:hover {
+  background-color: #b54300;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Dashboard Buttons */
+.dashboard-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-links li {
+  margin: 10px 0;
+}
+
+.button-link {
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #d35400;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Card */
+.recipe-card {
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.recipe-card-content {
+  padding: 20px 30px;
+  text-align: left;
+}
+
+.recipe-card-content h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-card-content p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Voting Results */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.rank-icon {
+  font-size: 20px;
+  width: 30px;
+}
+
+.vote-count {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.winner-row {
+  background-color: #fef9e7;
+  border: 2px solid #f1c40f;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.winner-row .vote-count {
+  color: #d35400;
+  font-weight: bold;
+}
+
+.glowing {
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #f1c40f;
+  }
+  to {
+    box-shadow: 0 0 25px #f39c12;
+  }
+}
+
+/* LOGIN PAGE CENTERING */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
